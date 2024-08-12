@@ -1,0 +1,86 @@
+.solution{
+    background: url(../../../public/background/background.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    @media screen and (max-width:700px) {
+        background: none;
+    }
+    &__container {
+        padding-top: clm-rem(6, 1440, 10);
+    }
+    &__textbox {
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
+        padding-right: 0;
+        @media screen and (max-width:700px) {
+            background: url(../../../public/background/background.jpg);
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: cover;
+            padding: 1rem;
+            max-width: 100%;
+        }
+    }
+    &__title {
+        @include mixins.fontParams(clm-rem(1.8, 1440, 3.625), colors.$text-title, 800, 1.4, 0.2px);
+        text-shadow: 2px 2px 7px colors.$text-title;
+        &:not(:last-child) {
+            margin-bottom: clm-rem(1, 1024, 1.875);
+        }
+    }
+    &__text {
+        @include mixins.fontParams(clm-rem(1, 1440, 1.25), colors.$text-default, 500, 1.5, 0.2px);
+        text-shadow: 2px 2px 7px colors.$text-default;
+        &:not(:last-child) {
+            margin-bottom: clm-rem(1, 1024, 1.875);
+        }
+        @media screen and (max-width:700px) {
+            background-color: #ffffff86;
+        }
+    }
+    &__btns{
+        display: flex;
+        gap: 0.625rem;
+        flex-wrap: wrap;
+    }
+    &__boxes {
+        display: flex;
+        gap: clm-rem(0.75, 1024, 1.875);
+        padding-top: 5rem;
+        @media screen and (max-width:700px) {
+            flex-direction: column;
+        }
+    }
+}
+.box-prew {
+    flex: 0 1 33.3%;
+    background-color: colors.$background-white;
+    padding: clm-rem(1.18, 1024, 2.18) clm-rem(1.5, 1024, 2.5);
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.164);
+    @media screen and (max-width:700px) {
+        flex: 1 1 100%;
+    }
+    &__icon {
+        &:not(:last-child) {
+            margin-bottom: 0.625rem;
+        }
+    }
+    &__title {
+        @include mixins.fontParams(clm-rem(1.2, 1024, 1.5), colors.$text-title, 700, 1.33, 0.1px);
+        &:not(:last-child) {
+            margin-bottom: 0.625rem;
+        }
+    }
+    &__text {
+        @include mixins.fontParams(clm-rem(0.7, 1024, 0.875), colors.$text-default, 500, 1.4, 0.2px);
+    }
+    &:last-child {
+        background-color: colors.$background-blue;
+        .box-prew__title, .box-prew__text {
+            color: colors.$text-white;
+        }
+    }
+}
+
