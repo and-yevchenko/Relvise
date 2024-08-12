@@ -1,0 +1,22 @@
+.menu {
+    &__list {
+        display: flex;
+        gap: 1.3rem;
+    }
+    &__link {
+        @include mixins.fontParams(toRem(14), colors.$text-default, 600, 1.7, 0.2);
+        transition: color 0.2s ease-out;
+        &:hover, 
+        &:active {
+            color: colors.$link-hover;
+            transition: color 0.2s ease-out;
+        }
+    }
+    &__item {
+        transition: transform 0.2s ease-out;
+        &:hover {
+            transform: translateY(2px);
+            transition: transform 0.2s ease-out;
+        }
+    }
+}

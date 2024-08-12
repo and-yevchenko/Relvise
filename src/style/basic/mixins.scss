@@ -1,0 +1,7 @@
+@mixin fontParams($fz, $c, $fw, $lh, $ls) {
+    font-size: $fz;
+    color: $c;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+}

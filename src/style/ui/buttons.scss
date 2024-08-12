@@ -1,0 +1,21 @@
+.button {
+    @include mixins.fontParams(0.875rem, colors.$text-btn, 700, 2, 0.2px);
+    background: colors.$btn-orange;
+    box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
+    border-radius: 37px;
+    padding: 0.625rem 2.25rem;
+    transition: all 0.2s ease-out;
+    &:hover {
+        background-color: colors.$btn-hover-orange;
+        transform: translateY(2px);
+        transition: all 0.2s ease-out;
+    }
+}
+.button--transparent{
+    background-color: transparent;
+    color: colors.$btn-blue;
+    border: 1px solid colors.$btn-blue;
+    &:hover {
+        background-color: colors.$btn-hover-blue;
+    }
+}

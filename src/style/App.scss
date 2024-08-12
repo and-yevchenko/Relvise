@@ -1,0 +1,35 @@
+@use './basic/colors.scss';
+@use './basic/mixins.scss';
+@import './basic/functions.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+//ui
+@import './ui/buttons.scss';
+@import './ui/textbox.scss';
+
+$maxWidthContainer: 1050px;
+
+#app {
+  font-family: 'Montserrat', sans-serif;
+  color: colors.$text-default;
+  background-color: colors.$background-default;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+[class*='__container'] {
+  max-width: $maxWidthContainer + 30;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.main {
+  flex: 1 1 auto;
+}
+
+// section
+@import './layout/header.scss';
+// @import './sections/solution.scss';
+// @import './layout/footer.scss';

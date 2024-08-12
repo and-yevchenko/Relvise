@@ -1,0 +1,11 @@
+.textbox {
+    &__title {
+        @include mixins.fontParams(2.5rem, colors.$text-title, 800, 1.4, 0.2px);
+        &:not(:last-child) {
+            margin-bottom: 0.625rem;
+        }
+    }
+    &__text {
+        @include mixins.fontParams(0.875rem, colors.$text-default, 500, 1.4, 0.2px);
+    }
+}
