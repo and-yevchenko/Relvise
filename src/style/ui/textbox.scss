@@ -1,6 +1,6 @@
 .textbox {
     &__title {
-        @include mixins.fontParams(2.5rem, colors.$text-title, 800, 1.4, 0.2px);
+        @include mixins.fontParams(clm-rem(2, 1024, 2.5), colors.$text-title, 800, 1.4, 0.2px);
         &:not(:last-child) {
             margin-bottom: 0.625rem;
         }
