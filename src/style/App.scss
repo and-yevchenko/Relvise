@@ -31,5 +31,10 @@ $maxWidthContainer: 1050px;
 
 // section
 @import './layout/header.scss';
-// @import './sections/solution.scss';
-// @import './layout/footer.scss';
+@import './sections/solution.scss';
+@import './sections/design.scss';
+@import './sections/practice.scss';
+@import './sections/who-we.scss';
+@import './sections/social.scss';
+@import './sections/contact.scss';
+@import './layout/footer.scss';

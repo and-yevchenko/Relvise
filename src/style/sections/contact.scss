@@ -1,0 +1,64 @@
+.contact {
+    &__container {
+        padding: 5rem 15px 9.25rem 15px;
+    }
+    &__textbox {
+        margin-bottom: 5rem;
+        text-align: center;
+        padding: 0 clm-rem(3, 1440, 10);
+        @media screen and (max-width:424px) {
+            padding: 0 1.5rem;
+        }
+    }
+}
+
+.support {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width:767px) {
+        flex-direction: column;
+    }
+    &__item {
+        width: 100%;
+        background-color: colors.$background-white;
+        flex: 1;
+        text-align: center;
+        padding: clm-rem(1.8, 1440, 3.125) clm-rem(1, 1440, 2.5);
+    }
+    &__icon {
+        width: 30%;
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+    &__adres {
+        @include mixins.fontParams(clm-rem(0.65, 1024, 0.875), colors.$text-title, 600, 1.7, 0.2);
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+        @media screen and (max-width:767px) {
+            font-size: 0.875rem;
+        }
+    }
+    &__title {
+        @include mixins.fontParams(clm-rem(0.875, 1024, 1), colors.$text-title, 700, 1.5, 0.1);
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+        @media screen and (max-width:767px) {
+            font-size: 1rem;
+        }
+    }
+    &__item--2 {
+        background-color: colors.$background-violet;
+        padding: clm-rem(2.5, 1440, 5) clm-rem(1, 1440, 2.5);
+        & .support__adres,
+        & .support__title {
+            color: colors.$text-white;
+        }
+        & .support__button {
+            color: colors.$text-white;
+            border: 1px solid colors.$text-white;
+        }
+    }
+}

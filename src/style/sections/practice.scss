@@ -1,0 +1,48 @@
+.practice {
+    &__container {
+        padding: clm-rem(7, 1440, 12.8) 15px 5rem 15px;
+    }
+    &__textbox {
+        margin-bottom: 2.8rem;
+        text-align: center;
+        padding: 0 clm-rem(3, 1440, 10);
+        @media screen and (max-width:424px) {
+            padding: 0 1.5rem;
+        }
+    }
+    &__columns {
+        display: flex;
+        gap: clm-rem(1, 1440, 1.875);
+        @media screen and (max-width:700px) {
+            flex-wrap: wrap;
+        }
+    }
+}
+.column-item {
+    flex: 1;
+    background-color: colors.$background-white;
+    max-width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media screen and (max-width:700px) {
+        flex: 1 50%;
+        margin: 0 auto;
+    }
+    &__textsection {
+        padding: clm-rem(1, 1440, 1.875);
+        height: 100%;
+    }
+    &__title {
+        @include mixins.fontParams(1rem, colors.$text-title, 700, 1.5, 0.1px);
+        &:not(:last-child) {
+            margin-bottom: 0.93rem;
+        }
+    }
+    &__text {
+        @include mixins.fontParams(0.875rem, colors.$text-default, 500, 1.4, 0.2px);
+    }
+    &__image {
+        width: 100%;
+    }
+}
