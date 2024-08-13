@@ -1,0 +1,101 @@
+.social {
+    position: relative;
+    &__container {
+        padding: 3.125rem 15px 1.25rem 15px;
+    }
+    &__decor {
+        width: 100%;
+        height: 4.8rem;
+        background-color: colors.$background-violet;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 4.375rem;
+        @media screen and (max-width:767px) {
+            flex-wrap: wrap;
+            row-gap: 2.5rem;
+        }
+    }
+    &__logo-link {
+        display: block;
+        @media screen and (max-width:767px) {
+            flex: 0 1 33.3%;
+        }
+    }
+    &__logo-img {
+        width: 100%;
+    }
+    &__subscribe {
+        margin: 0 2rem;
+        @media screen and (max-width:767px) {
+            margin: 0;
+        }
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.subscribe {
+    background-color: colors.$background-violet-200;
+    padding: 1.875rem 3.125rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width:767px) {
+        flex-direction: column;
+        padding: clm-rem(1, 767, 1.875) clm-rem(1, 767, 8);
+    }
+    @media screen and (max-width:500px) {
+        padding: 2rem;
+    }
+    &__text {
+        flex: 1 50%;
+        @include mixins.fontParams(clm-rem(1.3, 1024, 1.5), colors.$text-white, 700, 1.3, 0.1px);
+        padding-right: 3rem;
+        @media screen and (max-width:767px) {
+            text-align: center;
+            padding-right: 0;
+            margin-bottom: 2rem;
+        }
+    }
+    &__form {
+        flex: 1 50%;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        background-color: colors.$background-form;
+        align-items: center;
+        border: 1px solid colors.$border-form;
+        border-radius: 5px;
+        &-email {
+            width: 72%;
+            height: 100%;
+            background-color: transparent;
+            @include mixins.fontParams(0.875rem, colors.$text-default, 400, 2, 0.2px);
+            padding: 0.93rem 1.25rem;
+            @media screen and (max-width:500px) {
+                width: 62%;
+            }
+        }
+        &-submit {
+            width: 28%;
+            height: 100%;
+            background-color: colors.$btn-orange;
+            @include mixins.fontParams(0.875rem, colors.$text-btn, 400, 2, 0.2px);
+            border-radius: 0 5px 5px 0;
+            padding: 0.93rem 0;
+            &:hover {
+                background-color: colors.$btn-hover-orange;
+            }
+            @media screen and (max-width:500px) {
+                width: 38%;
+            }
+        }
+    }
+}
