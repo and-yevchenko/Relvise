@@ -11,11 +11,23 @@
         transition: all 0.2s ease-out;
     }
 }
-.button--transparent{
+.button--transparent {
     background-color: transparent;
     color: colors.$btn-blue;
     border: 1px solid colors.$btn-blue;
     &:hover {
         background-color: colors.$btn-hover-blue;
+    }
+}
+.button-contact {
+    background-color: transparent;
+    border: 1px solid colors.$btn-orange;
+    border-radius: 5px;
+    @include mixins.fontParams(0.875rem, colors.$btn-orange, 600, 1.7, 0.2px);
+    padding: 0.625rem 1.25rem;
+    transition: background 0.2s ease-out;
+    &:hover {
+        background-color: #00000025;
+        transition: background 0.2s ease-out;
     }
 }
