@@ -31,3 +31,14 @@
         transition: background 0.2s ease-out;
     }
 }
+.button-footer {
+    background-color: colors.$btn-orange;
+    border-radius: 5px;
+    @include mixins.fontParams(0.875rem, colors.$text-btn, 700, 2, 0.2px);
+    padding: 0.9rem 2.5rem;
+    transition: background 0.2s ease-out;
+    &:hover {
+        transition: background 0.2s ease-out;
+        background-color: colors.$btn-hover-orange;
+    }
+}

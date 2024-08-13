@@ -90,8 +90,10 @@
             @include mixins.fontParams(0.875rem, colors.$text-btn, 400, 2, 0.2px);
             border-radius: 0 5px 5px 0;
             padding: 0.93rem 0;
+            transition: background 0.2s ease-out;
             &:hover {
                 background-color: colors.$btn-hover-orange;
+                transition: background 0.2s ease-out;
             }
             @media screen and (max-width:500px) {
                 width: 38%;
