@@ -1,17 +1,17 @@
 @import './menu.scss';
 
 .header {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    &__container {
-        display: flex;
-        padding: 2.25rem 15px;
-        gap: clm-rem(2, 1440, 8);
-        @media screen and (max-width: 470px) {
-            justify-content: space-between;
-        }
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  &__container {
+    display: flex;
+    padding: 2.25rem 15px;
+    gap: clm-rem(2, 1440, 8);
+    @media screen and (max-width: 470px) {
+      justify-content: space-between;
     }
+  }
 }
