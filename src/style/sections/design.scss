@@ -1,50 +1,49 @@
 .design {
-    &__container {
-        padding-top: 5rem;
+  &__container {
+    padding-top: 5rem;
+  }
+  &__textbox {
+    text-align: center;
+    padding: 0 clm-rem(3, 1440, 10);
+    margin-bottom: 3.125rem;
+    @media screen and (max-width: 424px) {
+      padding: 0 1.5rem;
     }
-    &__textbox {
-        text-align: center;
-        padding: 0 clm-rem(3, 1440, 10);
-        margin-bottom: 3.125rem;
-        @media screen and (max-width:424px) {
-            padding: 0 1.5rem;
-        }
+  }
+  &__boxes {
+    height: 100%;
+    display: grid;
+    gap: clm-rem(1, 1024, 1.875);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    @media screen and (max-width: 920px) {
+      grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
     }
-    &__boxes {
-        height: 100%;
-        display: grid;
-        gap: clm-rem(1, 1024, 1.875);
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        @media screen and (max-width:920px) {
-            grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-        }
-        
-    }
+  }
 }
 .box-statistic {
-    background-color: colors.$background-white;
-    padding: clm-rem(0.75, 1024, 1.875);
-    text-align: center;
-    &__block-icon {
-        height: 3rem;
-        position: relative;
-        > * {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        &:not(:last-child) {
-            margin-bottom: 0.625rem;
-        }
+  background-color: colors.$background-white;
+  padding: clm-rem(0.75, 1024, 1.875);
+  text-align: center;
+  &__block-icon {
+    height: 3rem;
+    position: relative;
+    > * {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-    &__value {
-        @include mixins.fontParams(clm-rem(1.75, 1024, 2.5), colors.$text-title, 700, 1.4, 0.2px);
-        &:not(:last-child) {
-            margin-bottom: 0.625rem;
-        }
+    &:not(:last-child) {
+      margin-bottom: 0.625rem;
     }
-    &__chapter {
-        @include mixins.fontParams(clm-rem(0.75, 1024, 1), colors.$text-default, 700, 1.5, 0.1px);
+  }
+  &__value {
+    @include mixins.fontParams(clm-rem(1.75, 1024, 2.5), colors.$text-title, 700, 1.4, 0.2px);
+    &:not(:last-child) {
+      margin-bottom: 0.625rem;
     }
+  }
+  &__chapter {
+    @include mixins.fontParams(clm-rem(0.75, 1024, 1), colors.$text-default, 700, 1.5, 0.1px);
+  }
 }

@@ -1,44 +1,44 @@
 .button {
-    @include mixins.fontParams(0.875rem, colors.$text-btn, 700, 2, 0.2px);
-    background: colors.$btn-orange;
-    box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.75);
-    border-radius: 37px;
-    padding: 0.625rem 2.25rem;
+  @include mixins.fontParams(0.875rem, colors.$text-btn, 700, 2, 0.2px);
+  background: colors.$btn-orange;
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 37px;
+  padding: 0.625rem 2.25rem;
+  transition: all 0.2s ease-out;
+  &:hover {
+    background-color: colors.$btn-hover-orange;
+    transform: translateY(2px);
     transition: all 0.2s ease-out;
-    &:hover {
-        background-color: colors.$btn-hover-orange;
-        transform: translateY(2px);
-        transition: all 0.2s ease-out;
-    }
+  }
 }
 .button--transparent {
-    background-color: transparent;
-    color: colors.$btn-blue;
-    border: 1px solid colors.$btn-blue;
-    &:hover {
-        background-color: colors.$btn-hover-blue;
-    }
+  background-color: transparent;
+  color: colors.$btn-blue;
+  border: 1px solid colors.$btn-blue;
+  &:hover {
+    background-color: colors.$btn-hover-blue;
+  }
 }
 .button-contact {
-    background-color: transparent;
-    border: 1px solid colors.$btn-orange;
-    border-radius: 5px;
-    @include mixins.fontParams(0.875rem, colors.$btn-orange, 600, 1.7, 0.2px);
-    padding: 0.625rem 1.25rem;
+  background-color: transparent;
+  border: 1px solid colors.$btn-orange;
+  border-radius: 5px;
+  @include mixins.fontParams(0.875rem, colors.$btn-orange, 600, 1.7, 0.2px);
+  padding: 0.625rem 1.25rem;
+  transition: background 0.2s ease-out;
+  &:hover {
+    background-color: #00000025;
     transition: background 0.2s ease-out;
-    &:hover {
-        background-color: #00000025;
-        transition: background 0.2s ease-out;
-    }
+  }
 }
 .button-footer {
-    background-color: colors.$btn-orange;
-    border-radius: 5px;
-    @include mixins.fontParams(0.875rem, colors.$text-btn, 700, 2, 0.2px);
-    padding: 0.9rem 2.5rem;
+  background-color: colors.$btn-orange;
+  border-radius: 5px;
+  @include mixins.fontParams(0.875rem, colors.$text-btn, 700, 2, 0.2px);
+  padding: 0.9rem 2.5rem;
+  transition: background 0.2s ease-out;
+  &:hover {
     transition: background 0.2s ease-out;
-    &:hover {
-        transition: background 0.2s ease-out;
-        background-color: colors.$btn-hover-orange;
-    }
+    background-color: colors.$btn-hover-orange;
+  }
 }
